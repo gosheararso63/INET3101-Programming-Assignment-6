@@ -14,6 +14,7 @@ if [ -d build ]; then
   #echo "= removing previous build directory"
   #rm -rf build
   echo "Directory already exists!! Skip downloading..."
+  pushd build
 
 else
   mkdir build # make build directory
