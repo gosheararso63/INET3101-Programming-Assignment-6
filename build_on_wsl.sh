@@ -6,7 +6,7 @@
 # For Linux, also builds musl for truly static linking.
 
 coreutils_version="9.7" # latest version as of Aug 25, 2025
-musl_version="1.1.15"
+musl_version="1.2.5"
 
 platform=$(uname -s)
 
@@ -66,15 +66,15 @@ if [ ! -d releases ]; then
   mkdir releases
 fi
 
-echo "= striptease"
-strip -s -R .comment -R .gnu.version --strip-unneeded build/coreutils-${coreutils_version}/coreutils
-echo "= compressing"
+#echo "= striptease"
+#strip -s -R .comment -R .gnu.version --strip-unneeded build/coreutils-${coreutils_version}/coreutils
+#echo "= compressing"
 
 shopt -s extglob
-for file in build/coreutils-${coreutils_version}/src/!(*.*)
-do
-	upx --ultra-brute $file
-done
+#for file in build/coreutils-${coreutils_version}/src/!(*.*)
+#do
+#	upx --ultra-brute $file
+#done
 echo "= extracting coreutils binary"
 cp -r build/coreutils-${coreutils_version}/src/!(*.*) releases
 echo "= done"
