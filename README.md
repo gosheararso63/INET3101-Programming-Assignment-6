@@ -21,3 +21,6 @@ Windows machines, because there are no static libraries that can be used.
 On Linux, we use musl instead of glibc to avoid `dlopen()`.
 ## What's the point of this?
 I can run coreutils anywhere
+
+## Screenshots
+https://drive.google.com/file/d/1ugbBL1VF4pwyCNH0W-jsBYcw-LGhe63o/view?usp=sharing
